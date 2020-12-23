@@ -30,7 +30,25 @@ class CashRegister
     
   def items 
     
+<<<<<<< HEAD
     @items.collect {|item| item[:quantity].times.collect {item[:name]}}.flatten
+=======
+    out_arr = @items.collect do |item|
+      
+      #puts @items[:quantity]
+      @items[:quantity].times do
+        
+        curr_arr << item[:name]
+        curr_count +=1
+        
+      end
+      
+      curr_arr
+      
+    end
+
+  out_arr.flatten
+>>>>>>> ba72cb76eaaef6b64004511f16c5797998c691a1
     
   end
   
